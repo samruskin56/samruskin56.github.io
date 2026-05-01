@@ -50,10 +50,19 @@
 
     .bio-primary {
       color: #c8bfaa;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
       font-size: 16px;
       line-height: 1.8;
     }
+
+    .bio-primary a {
+      color: #c8bfaa;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+
+    .bio-primary a:hover { color: #f5f0e8; }
 
     .bio-secondary {
       color: #7a7268;
@@ -173,7 +182,7 @@
 
   <div class="name">sam ruskin</div>
 
-  <p class="bio-primary">investor at Reciprocal Ventures, a crypto-focused investment firm.</p>
+  <p class="bio-primary">investor at <a href="https://recvc.com/" target="_blank">Reciprocal Ventures</a>, a crypto-focused investment firm.</p>
   <p class="bio-secondary">previously: research analyst at Messari, product manager at ether.fi, and founder of the Crypto + Blockchain Society at Ohio State.</p>
 
   <div class="socials">
