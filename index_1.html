@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sam ruskin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0f1e;
+      color: #f5f0e8;
+      font-family: 'DM Mono', monospace;
+      font-size: 15px;
+      line-height: 1.8;
+      padding: 64px 48px;
+      max-width: 680px;
+      position: relative;
+    }
+
+    .contact-btn {
+      position: fixed;
+      top: 28px;
+      right: 32px;
+      background: #c8c0b0;
+      color: #0a0f1e;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.15s;
+    }
+
+    .contact-btn:hover { opacity: 0.8; }
+
+    .name {
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 32px;
+      letter-spacing: 0.02em;
+      color: #f5f0e8;
+    }
+
+    .bio-primary {
+      color: #c8bfaa;
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .bio-secondary {
+      color: #7a7268;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+      margin-bottom: 48px;
+    }
+
+    .socials a {
+      color: #8a8278;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      transition: color 0.15s;
+    }
+
+    .socials a:hover { color: #f5f0e8; }
+
+    .socials .divider {
+      color: #3a3830;
+      margin: 0 14px;
+      font-size: 13px;
+    }
+
+    .section {
+      border-top: 1px solid #141624;
+      padding-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    .section-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: #908878;
+      text-transform: lowercase;
+      transition: color 0.15s;
+    }
+
+    .section-toggle:hover .section-label { color: #b8b0a0; }
+
+    .toggle-icon {
+      font-size: 13px;
+      color: #908878;
+      transition: color 0.15s;
+    }
+
+    .section-toggle:hover .toggle-icon { color: #b8b0a0; }
+
+    .section-body {
+      display: none;
+      margin-top: 24px;
+    }
+
+    .section-body.open { display: block; }
+
+    .research-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #10121e;
+    }
+
+    .research-item:last-child { border-bottom: none; }
+
+    .research-title {
+      color: #b8b0a0;
+      font-size: 14px;
+      margin-bottom: 4px;
+      text-decoration: none;
+      display: block;
+      transition: color 0.15s;
+    }
+
+    a.research-title:hover { color: #f5f0e8; }
+
+    .research-meta {
+      font-size: 11px;
+      color: #706860;
+      letter-spacing: 0.06em;
+    }
+
+    .book-item {
+      padding: 11px 0;
+      border-bottom: 1px solid #10121e;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .book-item:last-child { border-bottom: none; }
+
+    .book-title { color: #b8b0a0; }
+    .book-author { color: #706860; font-size: 11px; letter-spacing: 0.04em; }
+
+    @media (max-width: 600px) {
+      body { padding: 40px 24px; }
+      .contact-btn { top: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="contact-btn" href="mailto:samruskin56@gmail.com">contact me</a>
+
+  <div class="name">sam ruskin</div>
+
+  <p class="bio-primary">investor at Reciprocal Ventures, a crypto-focused investment firm.</p>
+  <p class="bio-secondary">previously: research analyst at Messari, product manager at ether.fi, and founder of the Crypto + Blockchain Society at Ohio State.</p>
+
+  <div class="socials">
+    <a href="https://x.com/0xCryptoSam" target="_blank">x</a>
+    <span class="divider">/</span>
+    <a href="https://www.linkedin.com/in/samruskin/" target="_blank">linkedin</a>
+    <span class="divider">/</span>
+    <a href="mailto:samruskin56@gmail.com">email</a>
+  </div>
+
+  <div class="section">
+    <div class="section-toggle" onclick="toggle('research')">
+      <span class="section-label">research</span>
+      <span class="toggle-icon" id="research-icon">+</span>
+    </div>
+    <div class="section-body" id="research-body">
+
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/a-valuation-of-etherfi" target="_blank">a valuation of ether.fi (ethfi)</a>
+        <div class="research-meta">feb 2026 · defi</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/fear-uncertainty-and-daobt-aavedao-vs-aavelabs" target="_blank">fear, uncertainty, and daobt: $aave dao vs. aave labs</a>
+        <div class="research-meta">dec 2025 · defi</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://x.com/0xCryptoSam/status/1998421011352498535" target="_blank">anatomy of a crypto neobank</a>
+        <div class="research-meta">dec 2025 · neobanks</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/the-evolution-of-crypto-neobanks-defibanking" target="_blank">the evolution of crypto neobanks: defibanking</a>
+        <div class="research-meta">dec 2025 · neobanks</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/state-of-ai" target="_blank">state of ai</a>
+        <div class="research-meta">dec 2025 · ai</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://x.com/0xCryptoSam/status/1981773431839273081" target="_blank">equity perps: tall order, slow beginnings</a>
+        <div class="research-meta">oct 2025 · markets</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/attached-at-the-hip-3" target="_blank">attached at the hip-3: a year one projection of hip-3 revenue</a>
+        <div class="research-meta">oct 2025 · hyperliquid</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://x.com/0xCryptoSam/status/1932163261849309504" target="_blank">plasma: more than a stablecoin play</a>
+        <div class="research-meta">oct 2025 · stablecoins</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/enterprise-note-plasmas-path-to-becoming-a-tether-neobank" target="_blank">plasma's path to becoming a tether neobank</a>
+        <div class="research-meta">oct 2025 · stablecoins</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/evaluating-the-future-of-internet-payment-protocols" target="_blank">evaluating the future of internet payment protocols</a>
+        <div class="research-meta">aug 2025 · payments</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/the-role-of-ip-in-the-age-of-abundance" target="_blank">the role of ip in the age of abundance</a>
+        <div class="research-meta">apr 2025 · ai</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://x.com/0xCryptoSam/status/1887181735768559775" target="_blank">defai: the efficiency frontier</a>
+        <div class="research-meta">feb 2025 · ai</div>
+      </div>
+      <div class="research-item">
+        <a class="research-title" href="https://messari.io/report/defai-the-efficiency-frontier" target="_blank">defai: the efficiency frontier</a>
+        <div class="research-meta">feb 2025 · ai</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-toggle" onclick="toggle('reading')">
+      <span class="section-label">reading list</span>
+      <span class="toggle-icon" id="reading-icon">+</span>
+    </div>
+    <div class="section-body" id="reading-body">
+      <div class="book-item"><span class="book-title">the comfort crisis</span><span class="book-author">michael easter</span></div>
+      <div class="book-item"><span class="book-title">swimming to antarctica</span><span class="book-author">lynne cox</span></div>
+      <div class="book-item"><span class="book-title">dune</span><span class="book-author">frank herbert</span></div>
+      <div class="book-item"><span class="book-title">project hail mary</span><span class="book-author">andy weir</span></div>
+      <div class="book-item"><span class="book-title">conversations with friends</span><span class="book-author">sally rooney</span></div>
+      <div class="book-item"><span class="book-title">tomorrow and tomorrow and tomorrow</span><span class="book-author">gabrielle zevin</span></div>
+      <div class="book-item"><span class="book-title">station eleven</span><span class="book-author">emily st. john mandel</span></div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const body = document.getElementById(id + '-body');
+      const icon = document.getElementById(id + '-icon');
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      icon.textContent = isOpen ? '+' : '−';
+    }
+  </script>
+
+</body>
+</html>
